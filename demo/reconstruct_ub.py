@@ -48,14 +48,11 @@ if __name__ == "__main__":
 
     # Now we may reconstruct the ub field by iterative methods, never representing the
     # operator O as a sparse matrix
-    delta_g = gsino
-    b = W.forward(delta_g)
+    b = W.forward(gsino)
     inital_guess=np.zeros( (B.number_of_channels, B.number_of_basis_functions) )
     for i in range(9): inital_guess[i,-1] = UB0.T.flatten()[i] # For faster convergence we can use our initial guess to set the bias.
     x = utils.lsq( A, b, inital_guess, tol=1e-4, maxiter=9*B.number_of_basis_functions, disp=True )
     pixel_reconstruction = B.forward( x )
-    #for i in range(9):
-    #    pixel_reconstruction[i,:,:] = ( pixel_reconstruction[i,:,:] + UB0.T.flatten()[i] )
 
     # Finally we visualise the reconstructed field and compare to the ground truth strain field.
     euler, strain = utils.to_euler_and_strain( ub_field, [4.926, 4.926, 5.4189, 90., 90., 120.], grain )
