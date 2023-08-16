@@ -26,7 +26,6 @@ jobs:
         conda install -c astra-toolbox astra-toolbox
         conda install -c conda-forge matplotlib pip xfab
         python -m pip install .
-    - name: Install flyxdm
     - name: test flyxdm
       run: |
         python -c "import flyxdm"
