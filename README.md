@@ -6,7 +6,8 @@ In the setting of scanning-3DXRD/HEDM we show how a special block-partioned syst
 # Demo
 After installing the lib, please head to the demo folder and checkout the `simulate_diffraction.py` script which generates diffraction data into the `demo/data` folder. The data represents a single grain slice of alpha-quartz featuring both intragranular misorientations as well as strain, as can be seen below:
 
-![simul_gray](https://github.com/AxelHenningsson/flyxdm/assets/31615210/641696c1-e899-40db-913b-0fd082951d2c)
+![git_simul](https://github.com/AxelHenningsson/flyxdm/assets/31615210/abe6d16d-64e3-461a-b44f-43212a660ca4)
+
 
 The scripts `reconstruct_strain.py` and `reconstruct_ub.py` illustrate how intragranular strain and orientation reconstruction can take place using the simulated diffraction data.
 
@@ -32,3 +33,6 @@ You may now install flyxd using pip as
     cd flyxd
     pip install -e .
 ```
+
+# Credits
+This library makes good use of the open source [astra-toolbox ray-tracing primitives.](https://github.com/astra-toolbox/astra-toolbox)
