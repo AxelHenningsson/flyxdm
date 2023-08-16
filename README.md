@@ -27,10 +27,10 @@ Next we install some more dependencies
 ```
     conda install -c conda-forge matplotlib pip xfab
 ```
-You may now install flyxd using pip as
+You may now install flyxdm using pip as
 ```
     git clone https://github.com/AxelHenningsson/flyxdm.git
-    cd flyxd
+    cd flyxdm
     pip install -e .
 ```
 

@@ -1,0 +1,37 @@
+name: macos conda-build
+
+on: [push]
+
+
+jobs:
+  build-mac:
+    runs-on: macos-latest
+    strategy:
+      max-parallel: 5
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.10.0
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.10.0
+    - name: Add conda to system path
+      run: |
+        # $CONDA is an environment variable pointing to the root of the miniconda directory
+        echo $CONDA/bin >> $GITHUB_PATH
+    - name: Install dependencies
+      run: |
+        python --version
+        conda install python=3.9
+        conda install -c astra-toolbox astra-toolbox
+        conda install -c conda-forge matplotlib pip xfab
+    - name: Install flyxdm
+      run: |
+        git clone https://github.com/AxelHenningsson/flyxdm.git
+        cd flyxdm
+        pip install -e .
+    - name: test flyxdm
+      run: |
+        cd demo
+        python -c "import flyxdm"
+        python simulate_diffraction.py
