@@ -1,6 +1,6 @@
-# flyxdm
-![Linux build](https://github.com/github/docs/actions/workflows/python-package-conda-linux-py39.yml/badge.svg)
-![Macos build](https://github.com/github/docs/actions/workflows/python-package-conda-macos-py39.yml/badge.svg)
+# flyxdm [![ubuntu-linux conda-build](https://github.com/AxelHenningsson/flyxdm/actions/workflows/python-package-conda-linux-py39.yml/badge.svg)](https://github.com/AxelHenningsson/flyxdm/actions/workflows/python-package-conda-linux-py39.yml) [![macos conda-build](https://github.com/AxelHenningsson/flyxdm/actions/workflows/python-package-conda-macos-py39.yml/badge.svg)](https://github.com/AxelHenningsson/flyxdm/actions/workflows/python-package-conda-macos-py39.yml)
+
+
 A demo implementation of fast, factorized, on the fly, tomographic far field X-ray diffraction microscopy imaging.
 
 In the setting of scanning-3DXRD/HEDM we show how a special block-partioned system matrix factorization can be exploited to achieve a memory efficient and fast GPU-accelerated diffraction model implementation. This repository serves as a supplementary material for a publication currently under per-review that describes the mathematics and background for this demo library. DOI links will be made available upon publication.
