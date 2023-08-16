@@ -23,7 +23,7 @@ jobs:
         python3 --version
         conda install python=3.8
         conda install -c astra-toolbox astra-toolbox
-        conda install -c conda-forge matplotlib pip xfab
+        conda install -c conda-forge matplotlib xfab
         python3 -m pip install .
     - name: test flyxdm
       run: |
