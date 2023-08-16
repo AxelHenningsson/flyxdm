@@ -20,11 +20,11 @@ jobs:
         echo $CONDA/bin >> $GITHUB_PATH
     - name: Install dependencies
       run: |
-        python --version
+        python3 --version
         conda install python=3.8
         conda install -c astra-toolbox astra-toolbox
         conda install -c conda-forge matplotlib pip xfab
-        python -m pip install .
+        python3 -m pip install .
     - name: test flyxdm
       run: |
-        python -c "import flyxdm"
+        python3 -c "import flyxdm"
