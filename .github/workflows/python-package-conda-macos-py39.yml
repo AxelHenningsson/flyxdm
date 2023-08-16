@@ -27,7 +27,6 @@ jobs:
         conda install -c conda-forge matplotlib pip xfab
     - name: Install flyxdm
       run: |
-        git clone https://github.com/AxelHenningsson/flyxdm.git
         cd flyxdm
         pip install -e .
     - name: test flyxdm
