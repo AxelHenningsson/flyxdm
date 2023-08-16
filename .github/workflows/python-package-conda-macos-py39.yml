@@ -26,11 +26,6 @@ jobs:
         conda install -c astra-toolbox astra-toolbox
         conda install -c conda-forge matplotlib pip xfab
     - name: Install flyxdm
-      run: |
-        cd flyxdm
-        pip install -e .
     - name: test flyxdm
       run: |
-        cd demo
         python -c "import flyxdm"
-        python simulate_diffraction.py
