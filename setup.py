@@ -20,10 +20,11 @@ setuptools.setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
     packages=setuptools.find_packages(),
-    python_requires=">=3.2,<3.10",
+    python_requires=">=3.2",
     install_requires=['numpy', 'scipy', 'astra-toolbox', 'matplotlib', 'xfab']
 )
