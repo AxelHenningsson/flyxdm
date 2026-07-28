@@ -11,21 +11,20 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
+    - name: Set up Miniconda
+      uses: conda-incubator/setup-miniconda@v3
       with:
-        python-version: 3.8
-    - name: Add conda to system path
-      run: |
-        # $CONDA is an environment variable pointing to the root of the miniconda directory
-        echo $CONDA/bin >> $GITHUB_PATH
+        python-version: "3.8"
+        auto-activate-base: true
+        activate-environment: ""
     - name: Install dependencies
+      shell: bash -el {0}
       run: |
         python --version
-        conda install python=3.8
         conda install -c astra-toolbox astra-toolbox
         conda install -c conda-forge matplotlib xfab
         python -m pip install .
     - name: test flyxdm
+      shell: bash -el {0}
       run: |
         python -c "import flyxdm"
