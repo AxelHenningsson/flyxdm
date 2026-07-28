@@ -3,7 +3,11 @@
 
 A demo implementation of fast, factorized, on the fly, tomographic far field X-ray diffraction microscopy imaging.
 
-In the setting of scanning-3DXRD/HEDM we show how a special block-partioned system matrix factorization can be exploited to achieve a memory efficient and fast GPU-accelerated diffraction model implementation. This repository serves as a supplementary material for a publication currently under per-review that describes the mathematics and background for this demo library. DOI links will be made available upon publication.
+In the setting of scanning-3DXRD/HEDM we show how a special block-partioned system matrix factorization can be exploited to achieve a memory efficient and fast GPU-accelerated diffraction model implementation. This repository serves as a supplementary material for the publication:
+
+Henningsson, A. & Hall, S. A. (2023).  
+[An efficient system matrix factorization method for scanning diffraction based strain tensor tomography](https://doi.org/10.1107/S2053273323008136).  
+*Acta Crystallographica Section A: Foundations and Advances*, **79**(6), 542–549.
 
 # Demo
 After installing the lib, please head to the demo folder and checkout the `simulate_diffraction.py` script which generates diffraction data into the `demo/data` folder. The data represents a single grain slice of alpha-quartz featuring both intragranular misorientations as well as strain, as can be seen below:
